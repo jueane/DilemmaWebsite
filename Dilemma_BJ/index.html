@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<link rel="stylesheet" href="css/index.css">
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+		<link rel="shortcut icon" href="favicon.ico">
+		<script>
+			$(function() {
+				$('#main').fullpage({
+					sectionsColor: ['#2a2a2a', '#f6f6f6', '#2a2a2a', '#f6f6f6']
+				});
+			});
+
+			window.onload = function() {
+				var oDiv = document.getElementById('joinUs');
+				var aBtn = oDiv.getElementsByTagName('input');
+				var aDiv = oDiv.getElementsByTagName('div');
+
+				for(var i = 0; i < aBtn.length; i++) { //遍历div1中的按钮
+
+					aBtn[i].index = i; //给aBth[]添加自定义属性
+					aBtn[i].onclick = function() {
+
+						for(var i = 0; i < aBtn.length; i++) { //遍历按钮，将class清除
+							aBtn[i].className = 'unActive';
+							aDiv[i].style.display = 'none';
+						}
+						this.className = 'active';
+						aDiv[this.index].style.display = 'block';
+					}
+				}
+			}
+		</script>
+
+		<title>Dilemma Studio</title>
+	</head>
+
+	<body>
+		<div id="main">
+			<div class="section">
+				<div class="titlePic"></div>
+				<div class="button">
+					<a href="javascript:void(0)" onclick=" $.fn.fullpage.moveSectionDown()"></a>
+				</div>
+			</div>
+			<div class="section">
+				<div class="pageMain">
+					<div class="pageV" style="height:60%;">
+						<div class="title" style="background:url(img/img_title_aboutus.png) no-repeat center;">
+
+						</div>
+						<div class="about">
+							<div class="aboutPic"></div>
+							<div class="aboutFont">
+								<div style="color: #666666; text-align: left;background: #f0f0f0;padding: 26px;line-height: 25px;font-size: 14px;">我们在2014年正式踏上游戏制作的道路，经历了一年的磨练之后，在16年正式开始家用机游戏的制作，希望更多的玩家可以在PlayStation，Xbox，Steam上玩到我们的游戏，希望寻找可以让我们变得更加优秀的同伴。</div>
+								<div style="color: #9c9c9c;text-align: left;padding: 25px;line-height: 18px;font-size: 16px;">
+									从14年开始踏上这条路以来，我们一直觉得我们处在困境之中，所有的一切都那么困难重重，<br> <br>只要敢去想一下还有多少问题待解决，就会有一种难以喘息的感觉。
+
+									<br><br> 所以，我们的名字是：Dilemma - 困境，这样自嘲我们的每一天。<br><br> 每当我们想放弃的时候，都会去想，我们一直以来想做的，就是这件事吧？应该找不到更想做的事情了吧?
+
+									<br><br> 我们想做那种可以让玩家在若干年后还能和身边的人谈起，并且会让玩家谈起时眼睛发光的好游戏。
+
+									<br> <br>而你，最想做的事情是什么？
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="pageMain">
+					<div class="pageV" style="height: 50%;">
+						<div class="title" style="background:url(img/img_title_contact.png) no-repeat center;"></div>
+						<div class="contact">
+							<div class="contactPic"></div>
+							<div class="contactFont" style="color: #d7d7d7;text-align: left;padding: 10px 5px 5px 5px;line-height: 28px;font-size: 18px;">
+								中国•北京<br> 地址：北京市朝阳区悠乐汇e座1712
+								<br> 电话：+86 157 1146 4692
+								<br> 官网：www.dilemma-studio.com
+								<br> Email：contact@dilemma-studio.com
+								
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="pageMain">
+					<div class="pageV" style="height: 80%;">
+						<div class="title" style="background:url(img/img_title_joinus.png) no-repeat center;"></div>
+						<div style="color: #9c9c9c;text-align: center;margin-top: 20px;font-size: 16px; line-height: 18px;">
+							 我们为入职员工提供极有竞争力的薪资和福利待遇，<br>
+                             并提供良好的工作环境和学习氛围以及广阔的职业发展前景。期待你的加入！
+
+						</div>
+						<div id="joinUs" class="joinUs">
+						<span class="top">
+							<input class="active" type="button" value="原画" />
+							<input type="button" class="unActive" style="margin-left: 2%;" value="Unity工程师" />
+							<input type="button" class="unActive" style="margin-left: 2%;" value="3D模型" />
+							<input type="button" class="unActive" style="margin-left: 2%;" value="3D动作" />
+							<input type="button" class="unActive" style="margin-left: 2%;" value="技术美术(TA)" />
+							</span>
+							<div style="display:block;">
+								<b>岗位职责</b><br><br> 1.根据游戏风格及规范绘制出高水准的游戏原画<br>
+								 2.制作与游戏风格相符的角色、场景等等相关工作
+								<br> 3.负责部分宣传画的绘制工作
+								<br><br> <b>任职要求</b><br>
+								<br> 1.热爱游戏，有丰富的游戏经验，对游戏有自己的理解
+								<br> 2.专业要求：美术及相关专业
+								<br> 3.工作年限：2年以上游戏原画经验
+								<br> 4.良好的沟通能力，团队合作精神
+								<br> 5.关注国内外最新的游戏和设计
+
+							</div>
+							<div>
+								<b>岗位职责</b><br><br> 
+									1.Unity3D游戏客户端逻辑设计与实现  <br>
+									
+									<br><br> <b>任职要求</b><br>
+								<br> 1.热爱游戏，有丰富的游戏经验，对游戏有自己的理解<br> 
+									2.一年以上Unity3D项目编程经验<br> 
+									3.熟悉3D数学及相关的基本算法<br> 
+									4.良好的思维模式和编程习惯<br> 
+									5.熟悉常用数据结构、设计模式<br> 
+									6.有3D图形学基础、熟练使用Unity3D的Shaderlab和物理引擎优先<br> 
+
+							</div>
+							<div>
+								<b>岗位职责</b> <br> <br> 
+								1.根据设定创建高质量的3D模型<br />
+								2.制作符合游戏需求的3D角色或场景高模低模和贴图
+								<br><br> <b>任职要求</b> <br><br> 
+								 1.热爱游戏，有丰富的游戏经验，对游戏有自己的理解<br> 
+								 2.有良好的美术功底，对2D和3D艺术有较高的理解程度，有专业级贴图绘制和UV制作技能，可以绘制不同风格的贴图，色彩把控能力强
+								<br> 3.对角色表情的制作拥有深刻理解<br>
+									4.良好的沟通能力，团队合作精神<br>
+								    5.关注国内外最新的游戏和设计<br>
+								
+
+							</div>
+							<div>
+								<b>岗位职责</b> <br><br> 1.负责3D角色的动作设计<br>2.游戏动作的制作、调整和改善
+								<br><br> <b>任职要求</b> <br><br> 1.热爱游戏，有丰富的游戏经验，对游戏有自己的理解<br>
+								2.有扎实的美术基础，对生物的运动规律有较深认识，对物理动力学属性有一定的把握能力<br>
+								3.深刻的了解3D动画制作要领，可以熟练的绑定骨骼和手调关键帧动画，能够表现自然流畅的动画效果<br>
+								4.具有对人物，动物，物体等动画的深刻理解和分析能力<br>
+								5.良好的沟通能力，团队合作精神<br>
+								6.关注国内外最新的游戏和设计<br>
+
+							</div>
+							<div>
+								<b>岗位职责</b> <br> <br>
+								1.Unity3D下的Shader开发<br>
+								2.制作符合游戏需求的视觉表现效果<br>
+								3.制作相关工具提高项目效率
+								<br><br><b>任职要求</b><br><br> 
+								1.热爱游戏，有丰富的游戏经验，对游戏有自己的理解<br> 
+								2.熟悉Cg语言，有独立编写Shader的能力<br> 
+								3.良好的图形学和算法能力<br> 
+								4.有过Unity3D项目经验者优先<br> 
+								5.良好的沟通能力，团队合作精神<br> 
+								6.关注国内外最新的游戏和设计<br> 
+								<br>
+
+							</div>
+						</div>
+                        <div style="color: #9c9c9c;font-size: 16px; position:relative;height:auto;width:100%;margin-top:15%;">
+                            <div style="text-align: center;">
+							 
+                            </div>
+					    </div>
+					</div>
+                    
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
