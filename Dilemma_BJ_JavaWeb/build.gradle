@@ -1,0 +1,39 @@
+apply plugin:'java'
+apply plugin:'war'
+apply plugin:'eclipse'
+apply plugin:'jetty'
+
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceCompatibility=1.6
+
+eclipse {
+  classpath {
+    //customizing the classes output directory:
+    defaultOutputDir = file('WebContent/WEB-INF/classes')
+  }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+	compile 'javax.servlet:javax.servlet-api:3.1.0'
+	compile 'org.springframework:spring-webmvc:4.2.4.RELEASE'
+	compile 'org.springframework:spring-context-support:4.2.4.RELEASE'
+	
+	compile 'org.slf4j:slf4j-api:1.7.13'
+	compile 'org.slf4j:jcl-over-slf4j:1.7.13'
+	compile 'ch.qos.logback:logback-classic:1.1.3'
+	compile 'junit:junit:4.12'
+	compile 'org.apache.httpcomponents:httpclient:4.5.1'
+	compile 'org.freemarker:freemarker:2.3.23'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.6.5'
+
+
+	
+}
+

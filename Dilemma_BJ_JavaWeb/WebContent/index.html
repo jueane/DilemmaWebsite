@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<link rel="stylesheet" href="css/index.css">
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+		<link rel="shortcut icon" href="favicon.ico">
+		<script>
+			$(function() {
+				$('#main').fullpage({
+					sectionsColor: ['#2a2a2a', '#f6f6f6', '#2a2a2a', '#f6f6f6']
+				});
+			});
+
+			window.onload = function() {
+				var oDiv = document.getElementById('joinUs');
+				var aBtn = oDiv.getElementsByTagName('input');
+				var aDiv = oDiv.getElementsByTagName('div');
+
+				for(var i = 0; i < aBtn.length; i++) { //遍历div1中的按钮
+
+					aBtn[i].index = i; //给aBth[]添加自定义属性
+					aBtn[i].onclick = function() {
+
+						for(var i = 0; i < aBtn.length; i++) { //遍历按钮，将class清除
+							aBtn[i].className = 'unActive';
+							aDiv[i].style.display = 'none';
+						}
+						this.className = 'active';
+						aDiv[this.index].style.display = 'block';
+					}
+				}
+			}
+		</script>
+
+		<title>Dilemma Studio</title>
+	</head>
+
+	<body>
+		<div id="main">
+			<div class="section">
+				<div class="titlePic"></div>
+				<div class="button">
+					<a href="javascript:void(0)" onclick=" $.fn.fullpage.moveSectionDown()"></a>
+				</div>
+			</div>
+			<div class="section">
+				<div class="pageMain">
+					<div class="pageV" style="height:60%;">
+						<div class="title" style="background:url(img/img_title_aboutus.png) no-repeat center;">
+
+						</div>
+						<div class="about">
+							<div class="aboutPic"></div>
+							<div class="aboutFont">
+								<div style="color: #666666; text-align: left;background: #f0f0f0;padding: 26px;line-height: 25px;font-size: 14px;">我们在2014年正式踏上游戏制作的道路，经历了一年的磨练之后，在15年正式开始家用机游戏的制作，希望更多的玩家可以在PlayStation，Xbox，Steam上玩到我们的游戏，希望寻找可以让我们变得更加优秀的同伴。</div>
+								<div style="color: #9c9c9c;text-align: left;padding: 25px;line-height: 18px;font-size: 16px;">
+									从14年开始踏上这条路以来，我们一直觉得我们处在困境之中，所有的一切都那么困难重重，<br> <br>只要敢去想一下还有多少问题待解决，就会有一种难以喘息的感觉。
+
+									<br><br> 所以，我们的名字是：Dilemma - 困境，这样自嘲我们的每一天。<br><br> 每当我们想放弃的时候，都会去想，我们一直以来想做的，就是这件事吧？应该找不到更想做的事情了吧?
+
+									<br><br> 我们想做那种可以让玩家在若干年后还能和身边的人谈起，并且会让玩家谈起时眼睛发光的好游戏。
+
+									<br> <br>而你，最想做的事情是什么？
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="pageMain">
+					<div class="pageV" style="height: 50%;">
+						<div class="title" style="background:url(img/img_title_contact.png) no-repeat center;"></div>
+						<div class="contact">
+							<div class="contactPic"></div>
+							<div class="contactFont" style="color: #d7d7d7;text-align: left;padding: 10px 5px 5px 5px;line-height: 24px;font-size: 18px;">
+								中国•洛阳<br> 地址：西工区建业凯旋广场商务楼15A层
+								<br> 电话：0379-69867978
+								<br> 官网：www.dilemma-studio.com
+								<br> Email：contact@dilemma-studio.com
+								
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="pageMain">
+					<div class="pageV" style="height: 80%;">
+						<div class="title" style="background:url(img/img_title_joinus.png) no-repeat center;"></div>
+						<div style="color: #9c9c9c;text-align: center;margin-top: 20px;font-size: 16px; line-height: 18px;">
+							 我们为入职员工提供极有竞争力的薪资和福利待遇，<br>
+                             并提供良好的工作环境和学习氛围以及广阔的职业发展前景。期待你的加入！
+
+						</div>
+						<div id="joinUs" class="joinUs">
+						<span class="top">
+							<input class="active" type="button" value="3D建模/动作" />
+							<input type="button" class="unActive" style="margin-left: 2%;" value="技术研发" />
+							<input type="button" class="unActive" style="margin-left: 2%;" value="原画师" />
+							<input type="button" class="unActive" style="margin-left: 2%;" value="动画师" />
+							<input type="button" class="unActive" style="margin-left: 2%;" value="概念设计" />
+							</span>
+							<div style="display:block;">
+								<b>3D建模师：</b><br><br> 1.精通maya，3Dmax建模，对于角色模型有优秀的形体塑造能力；
+								 2.对于场景模型有优秀的空间构图塑造能力；
+								<br> 3.能独立完成高模制作，精通Zbrush或其它任意一款模型雕刻软件；
+								 4.能有效的与绑定、动画部门对接，了解绑定、动画等后续流程需求；
+								 5.具有较强责任感及良好的沟通技巧，有较强的团队意识 ；<br><br> <b>3D动作设计师：</b><br>
+								<br> 1.精于各类人形.怪物角色的写实动作设计能力,有审核指导能力；
+								<br> 2.有强烈的责任心和细致对待工作的能力，参与3D端游或者uinty手游开发经历，对动作的共用和角色换装方面经验；
+								<br> 3.精通动画理论基础，熟悉相关专业软件；
+								<br>
+
+							</div>
+							<div>
+								<b>C/C++工程师：</b><br><br> 1. 负责服务器软件的设计与开发；  2. 参与项目相关技术架构设计和项目估算；  3. 参与部分文档编写和测试工作； <br><br> <b>图形学计算高级工程师：</b><br>
+								<br> 1、 计算机图形学、数学、应用物理等相关专业硕士及以上学历；2、 熟悉骨骼蒙皮，骨骼动画，逆向动力学等人物动作常用技术的基本实现原理，有人物动作系统的开发经验；<br> 3、 熟练掌握C++，有较强的编程能力，有较强的代码阅读和设计能力，学习能力强； 4、 对于人物动作技术学习有浓厚兴趣，能快速学习新知识；<br>
+
+							</div>
+							<div>
+								<b>【岗位职责】</b> <br> <br> 1.独立完成游戏中建筑、场景、物件等的设计和绘制；
+								2.配合策划,主美的美术要求，完成原画创意设定；
+								<br><br> <b>【岗位要求】</b> <br><br> 1.美术或相关专业毕业；
+								 2.手绘能力出众，并能熟练运用各类平面设计制作软件，如：Photo shop、Painter等； 熟悉原画设计、平面设计及相关工作规范流程；<br> 3.有深厚的色彩和造型基础，以及良好的色彩控制能力，能迅速标准确定表达出设计要求的场景；
+								<br> 4.具有原画工作经验，并有横版2D场景绘制经验；
+								 5.良好的团队合作精神，沟通意识好，积极乐观向上的工作态度，勇于接受挑战的精神；
+								<br>
+
+							</div>
+							<div>
+								<b>【岗位职责】</b> <br><br> 1、根据项目情况负责项目动画制作
+								<br><br> <b>【岗位要求】</b> <br><br> 1.本科学历，动画或者相关美术专业；
+								 2.熟练掌握AE,FLASH,PS,AI等后期合成或者动画软件，并对3D软件如3Dmax、MAYA、C4D等有较深入的了解；
+								<br> 3.团队意识强，善于沟通；
+								 4.丰富的想象力和创造力，能独立完成动画短片，动画节奏感强，镜头感好。
+								<br>
+
+							</div>
+							<div>
+								<b>【岗位职责】</b> <br> <br>1.根据指定的设计文档，独立设计游戏中的场景概念图、气氛图，及场景相关物件、道具等的设计细化；过场剧情分镜设计及绘制。
+								2.配合项目需求，呈现场景精美画面；
+								<br> 3.与其他环节团队进行良好的设计沟通，准确实现项目需求和表现风格；
+								<br><br><b>【岗位要求】</b><br><br> 1.喜爱绘画，熟练掌握数字绘画软件；
+								 2.具有扎实的美术功底和手绘基础；对于透视、人体解剖学、色彩理论和建筑设计有一定的了解；
+								<br> 3.能够适应不同美术风格主题；熟悉原画设计及相关工作规范流程；熟悉各种类型的网络游戏，持续关注并了解业界动态；
+								4.具有团队合作精神，富于创造力，良好的理解力，流畅的沟通能力。
+								<br>
+
+							</div>
+						</div>
+                        <div style="color: #9c9c9c;font-size: 16px; position:relative;height:auto;width:100%;margin-top:15%;">
+                            <div style="text-align: center;">
+							  备案号：<a target="_blank" href="http://www.miitbeian.gov.cn" style="color: #9c9c9c;">豫ICP备14026600号-2</a>
+                            &nbsp&nbsp&nbsp&nbsp
+                              Copyright&copy;2016-2017 <u></u> 洛阳胜业网络科技版权所有
+                            </div>
+					    </div>
+					</div>
+                    
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
